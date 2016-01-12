@@ -6,13 +6,11 @@ public class Computer extends Player{
 	}
 	
 	
-	//더 똑똑한 컴퓨터를 만들면
-	public void removeObjects(){
+	public void removeObjects(Draw draw){
 		String name = "";
 		int delCount = 0 ;
 		
-		System.out.println("computer(player"+playerNumber+") turn");
-		
+		draw.beforeComputerStart(playerNumber);
 		do{
 			name = (char)(Math.random()*Manager.maps.size() + 'a') +"";
 			Heap h  = Manager.maps.get(name);

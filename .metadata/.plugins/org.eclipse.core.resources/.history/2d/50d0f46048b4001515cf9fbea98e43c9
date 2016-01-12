@@ -1,0 +1,6 @@
+import javax.swing.JButton;
+
+public class FrameExam {
+	JFrame frame = new JFrame("AA");
+	JButton button = new JButton();
+}

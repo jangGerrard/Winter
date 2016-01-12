@@ -1,0 +1,42 @@
+
+public class GUIDraw implements Draw{
+
+	@Override
+	public void draw() {
+		//not TODO
+	}
+	
+	public void drawCurrentHeapState(){
+		
+	}
+
+	@Override
+	public void finishedDrawPrint(int playerNumber) {
+		
+	}
+
+	@Override
+	public void beforeGetCount(int playerNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void beforeComputerStart(int playerNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void heapNameCountSelectError() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void drawGetHeapCount() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

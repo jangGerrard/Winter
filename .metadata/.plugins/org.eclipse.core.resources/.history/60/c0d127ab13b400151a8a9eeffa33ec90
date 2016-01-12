@@ -1,0 +1,6 @@
+
+public class TestMain {
+	public static void main(String[] args) {
+		System.out.println("random value (*3) : "+ Math.random() * 3);
+	}
+}

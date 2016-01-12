@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Manager {
+	
+	public static int totalCount = 0;
+	public static int numOfHeap = 0 ;
+	public static Map<String,Heap> maps = new HashMap<String, Heap>();
+	public static List<Player> players = new ArrayList<Player>();
+	
+	public static void init(){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("how many heap? : ");
+		
+		int heapToGen = sc.nextInt();
+		
+		for(int i  = 1 ; i <= heapToGen; i++){
+			String name = (char)('a' + i-1)+"";
+			Heap heap = new Heap( name , (2*i+1));
+			maps.put(name, heap);
+		}
+		
+		//sc.close();
+	}
+	
+	public static boolean isValidCount(String name, int deleteCount)
+	{
+		Heap h = Manager.maps.get(name);
+		if(h != null){
+			if(deleteCount <= h.getCount() && deleteCount > 0 ){
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public static boolean isFinished(){
+		if(Manager.totalCount == 0){
+			return true;
+		}
+		return false;
+	}
+	
+	public static void printCurrentStatus(){
+		for(int i = 1 ; i <= Manager.maps.size(); i++){
+			Manager.maps.get((char)('a' + i-1)+"").printState();
+		}
+	}
+}

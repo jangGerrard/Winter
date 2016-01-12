@@ -1,0 +1,20 @@
+
+public class CommandDraw implements Draw{
+
+	@Override
+	public void draw() {
+		
+	}
+
+	@Override
+	public void finishedDrawPrint() {
+		
+	}
+
+	@Override
+	public void heapNameCountSelectError() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

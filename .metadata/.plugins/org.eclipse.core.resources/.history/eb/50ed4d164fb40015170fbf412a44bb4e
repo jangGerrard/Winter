@@ -1,0 +1,11 @@
+
+public interface Draw {
+	public void draw();
+
+	public void finishedDrawPrint();
+
+	public void heapNameCountSelectError();
+
+	public void beforeGetCount(int playerNumber);
+	
+}

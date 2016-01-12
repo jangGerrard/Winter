@@ -5,22 +5,23 @@ public class Runner {
 
 		Player user = new User(1);
 		Player computer = new Computer(2);
-
+		Draw draw = new CommandDraw();
+		
+		
 		Manager.players.add(user);
 		Manager.players.add(computer);
 
-		Manager.init();
+		Manager.init(draw);
 
 		while (true) {
 
 			for (Player player : Manager.players) {
-				Manager.printCurrentStatus();
+				draw.drawCurrentHeapState();
 
-				player.removeObjects();
+				player.removeObjects(draw);
 
 				if (Manager.isFinished()) {
-					System.out.println("player" + player.getPlayerNumber() + " lose");
-					System.out.println("game over ");
+					draw.finishedDrawPrint(player.getPlayerNumber());
 					System.exit(0);
 					break;
 				}

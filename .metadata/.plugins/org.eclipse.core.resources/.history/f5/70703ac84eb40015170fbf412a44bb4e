@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class User extends Player{
+	
+	User(int playerNumber){
+		this.playerNumber = playerNumber;
+	}
+	
+	public void removeObjects(Draw draw){
+			
+		Scanner sc = new Scanner(System.in);
+		
+		String name = "";
+		int delCount =  0 ; 
+		
+		while(true){
+			System.out.print("user(player"+playerNumber+") turn\ninput( format --> heapName count ) : ");
+			
+			name = sc.next();
+			delCount = sc.nextInt();
+			
+			if(Manager.isValidCount(name,delCount)){
+				break;
+			}else{
+				draw.heapNameCountSelectError();
+				System.out.println("heap 이름과 count를 다시 입력해 주세요;");
+			}
+		}
+
+		//제거
+		Heap h = Manager.maps.get(name);
+		int currentCount = h.getCount();
+		h.setCount(currentCount- delCount);
+		Manager.totalCount -= delCount;
+
+	}
+}

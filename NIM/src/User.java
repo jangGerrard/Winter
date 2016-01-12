@@ -6,7 +6,7 @@ public class User extends Player{
 		this.playerNumber = playerNumber;
 	}
 	
-	public void removeObjects(){
+	public void removeObjects(Draw draw){
 			
 		Scanner sc = new Scanner(System.in);
 		
@@ -14,15 +14,15 @@ public class User extends Player{
 		int delCount =  0 ; 
 		
 		while(true){
-			System.out.print("user(player"+playerNumber+") turn\ninput( format --> heapName count ) : ");
 			
+			draw.beforeGetCount(playerNumber);
 			name = sc.next();
 			delCount = sc.nextInt();
 			
 			if(Manager.isValidCount(name,delCount)){
 				break;
 			}else{
-				System.out.println("heap 이름과 count를 다시 입력해 주세요;");
+				draw.heapNameCountSelectError();
 			}
 		}
 

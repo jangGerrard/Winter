@@ -1,0 +1,7 @@
+
+public interface Draw {
+	public void draw();
+
+	public void finishedDrawPrint();
+	
+}

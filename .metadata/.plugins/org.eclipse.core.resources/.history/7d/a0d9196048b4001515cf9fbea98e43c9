@@ -1,0 +1,4 @@
+
+public class FrameExam {
+	JFrame frame = new JFrame("AA");
+}

@@ -1,0 +1,19 @@
+
+public class CommandDraw implements Draw{
+
+	@Override
+	public void draw() {
+		
+	}
+
+	@Override
+	public void finishedDrawPrint() {
+		
+	}
+
+	@Override
+	public void heapNameCountSelectError() {
+		System.out.println("heap 이름과 count를 다시 입력해 주세요;");
+	}
+
+}

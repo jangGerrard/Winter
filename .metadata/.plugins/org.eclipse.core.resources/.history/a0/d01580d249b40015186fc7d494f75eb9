@@ -1,0 +1,10 @@
+import javax.swing.JFrame;
+
+public class MyFrame extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2122161377842820073L;
+
+}

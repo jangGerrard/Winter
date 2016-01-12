@@ -11,10 +11,10 @@ public class Manager {
 	public static Map<String,Heap> maps = new HashMap<String, Heap>();
 	public static List<Player> players = new ArrayList<Player>();
 	
-	public static void init(){
+	public static void init(Draw draw){
 		Scanner sc = new Scanner(System.in);
-		System.out.print("how many heap? : ");
 		
+		draw.drawGetHeapCount();
 		int heapToGen = sc.nextInt();
 		
 		for(int i  = 1 ; i <= heapToGen; i++){
@@ -44,9 +44,4 @@ public class Manager {
 		return false;
 	}
 	
-	public static void printCurrentStatus(){
-		for(int i = 1 ; i <= Manager.maps.size(); i++){
-			Manager.maps.get((char)('a' + i-1)+"").printState();
-		}
-	}
 }
