@@ -7,16 +7,10 @@ public class CommandDraw implements Draw{
 	}
 	
 	public void drawCurrentHeapState(){
-//		for(int i = 1 ; i <= Manager.maps.size(); i++){
-//			Manager.maps.get((char)('a' + i-1)+"").printState();
-//		}
-		
 		for(int i = 1 ; i <= Manager.maps.size(); i++){
 			Heap h = Manager.maps.get((char)('a' + i-1)+"");
 			System.out.println(h.getName() + " ("+ h.getCount()+") ");
 		}
-		
-		
 	}
 
 

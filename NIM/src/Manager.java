@@ -15,12 +15,16 @@ public class Manager {
 		Scanner sc = new Scanner(System.in);
 		
 		draw.drawGetHeapCount();
-		int heapToGen = sc.nextInt();
 		
-		for(int i  = 1 ; i <= heapToGen; i++){
-			String name = (char)('a' + i-1)+"";
-			Heap heap = new Heap( name , (2*i+1));
-			maps.put(name, heap);
+		
+		if(draw instanceof CommandDraw){
+			int heapToGen = sc.nextInt();
+
+			for(int i  = 1 ; i <= heapToGen; i++){
+				String name = (char)('a' + i-1)+"";
+				Heap heap = new Heap( name , (2*i+1));
+				maps.put(name, heap);
+			}
 		}
 		
 		//sc.close();

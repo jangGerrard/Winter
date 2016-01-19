@@ -6,12 +6,13 @@ public class Runner {
 		Player user = new User(1);
 		Player computer = new Computer(2);
 		Draw draw = new CommandDraw();
-		
+		SwingHandler swingHandler = new SwingHandler();
 		
 		Manager.players.add(user);
 		Manager.players.add(computer);
-
+		
 		Manager.init(draw);
+	
 
 		while (true) {
 

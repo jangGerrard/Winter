@@ -1,6 +1,8 @@
 
 public class GUIDraw implements Draw{
 
+	private SwingHandler swingHandler;
+	
 	public GUIDraw() {
 		//SWing init
 		///some class and init
@@ -13,12 +15,19 @@ public class GUIDraw implements Draw{
 	}
 	
 	public void drawCurrentHeapState(){
+//		for(int i = 1 ; i <= Manager.maps.size(); i++){
+//			
+//			Heap h = Manager.maps.get((char)('a' + i-1)+"");
+//			swingHandler.
+//		}
+		
+		
 		
 	}
 
 	@Override
 	public void beforeGetCount(int playerNumber) {
-		// TODO Auto-generated method stub
+		swingHandler.beforeGetCount();
 		
 	}
 
